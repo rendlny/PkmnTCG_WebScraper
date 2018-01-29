@@ -1,5 +1,5 @@
 class Attack:
-    def _init_(self,name,desc,dmg,cost):
+    def __init__(self,name,desc,dmg,cost):
         self.name = name
         self.desc = desc
         self.dmg = dmg
@@ -26,12 +26,12 @@ class Attack:
         self.dmg = dmg
         return
 
-    def get_cost(cost):
+    def get_cost(self):
         return self.cost
 
     def set_cost(self, cost):
         self.cost = cost
-        return    
+        return
 
     def displayAttack(self):
-        return "Name: ", self.name, " , Description: ", self.desc, ", Damage: ", self.dmg, ", Cost: ", self.cost
+        return 'Name: ' + self.name +  ', Description: ' + self.desc + ', Damage: ' + str(self.dmg) + ', Cost: ' + self.cost

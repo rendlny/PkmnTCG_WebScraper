@@ -5,6 +5,7 @@
 # DETAILS GRABBED:
    Url to card image
    Card name
+<<<<<<< HEAD
    Stage
    HP
    Type
@@ -20,6 +21,10 @@
    Card Number
 
  Card Set & Subset must be set in the code currently & it will run through that subset
+=======
+
+ Card Set & Subset must be set in the code currently & it will run through that subset 
+>>>>>>> origin/master
 
 # FUTURE FEATURES:
     retrieve more card details
