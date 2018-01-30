@@ -1,16 +1,16 @@
 class Set:
-    def __init__(self,id,name,year,size,desc):
-        self.id = id
+    def __init__(self,s_id,name,year,size,desc):
+        self.s_id = s_id
         self.name = name
         self.year = year
         self.size = size
         self.desc = desc
 
-        def get_id(self):
-            return self.id
+        def get_s_id(self):
+            return self.s_id
 
-        def set_id(self, id):
-            self.id = id
+        def set_s_id(self, s_id):
+            self.s_id = s_id
             return
 
         def get_name(self):
@@ -41,5 +41,5 @@ class Set:
             self.desc = desc
             return
 
-        def displaySet(self):
-            return 'ID: ' + self.id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + ', Desc: ' + self.desc  
+        def display_set(self):
+            return 'ID: ' + self.s_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + ', Desc: ' + self.desc
