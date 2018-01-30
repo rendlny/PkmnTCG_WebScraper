@@ -1,5 +1,5 @@
 class Card:
-    def __init__(self,c_id,name,desc,setnum,artist,rarity,art,set_id,subset,type_id):
+    def __init__(self,c_id,name,desc,setnum,artist,rarity,art,set_id,subset_id,type_id):
         self.c_id = c_id
         self.name = name
         self.desc = desc
@@ -82,4 +82,6 @@ class Card:
             return
 
         def display_card(self):
-            return 'ID: ' + self.c_id + ', Name: ' + self.name + ', Description: ' + self.desc + ', SetNum: ' + self.setnum + ', Artist: ' + self.artist + ', Rarity: ' + self.rarity + ', Art: ' + self.art + ', Set ID: ' + self.set_id + ', Subset ID: ' + self.subset_id + ', Type ID: ' + self.type_id
+            msg1 = 'ID: ' + self.c_id + ', Name: ' + self.name + ', Description: ' + self.desc + ', SetNum: ' + self.setnum + ', Artist: ' + self.artist + ', Rarity: ' + self.rarity
+            msg = msg1 + ', Art: ' + self.art + ', Set ID: ' + self.set_id + ', Subset ID: ' + self.subset_id + ', Type ID: ' + self.type_id
+            return  msg

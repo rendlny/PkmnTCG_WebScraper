@@ -42,4 +42,4 @@ class Attack:
         return
 
     def display_attack(self):
-        return 'ID: ' + self.a_id ', Name: ' + self.name +  ', Description: ' + self.desc + ', Damage: ' + str(self.dmg) + ', Cost: ' + self.cost
+        return 'ID: ' + self.a_id + ', Name: ' + self.name +  ', Description: ' + self.desc + ', Damage: ' + str(self.dmg) + ', Cost: ' + self.cost

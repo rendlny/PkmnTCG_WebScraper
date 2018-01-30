@@ -26,4 +26,4 @@ class CardType:
             return
 
         def display_cardType(self):
-            return 'ID: ' + self.ct_id + ', Name: ' + self.name + ', Desc: ' + self.desc 
+            return 'ID: ' + str(self.ct_id) + ', Name: ' + self.name + ', Desc: ' + self.desc 
