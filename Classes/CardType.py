@@ -4,26 +4,26 @@ class CardType:
         self.name = name
         self.desc = desc
 
-        def get_ct_id(self):
-            return self.ct_id
+    def get_ct_id(self):
+        return self.ct_id
 
-        def set_ct_id(self,ct_id):
-            self.ct_id = ct_id
-            return
+    def set_ct_id(self,ct_id):
+        self.ct_id = ct_id
+        return
 
-        def get_name(self):
-            return self.name
+    def get_name(self):
+        return self.name
 
-        def set_name(self,name):
-            self.name = name
-            return
+    def set_name(self,name):
+        self.name = name
+        return
 
-        def get_desc(self):
-            return self.desc
+    def get_desc(self):
+        return self.desc
 
-        def set_desc(self,desc):
-            self.desc = desc
-            return
+    def set_desc(self,desc):
+        self.desc = desc
+        return
 
-        def display_cardType(self):
-            return 'ID: ' + str(self.ct_id) + ', Name: ' + self.name + ', Desc: ' + self.desc 
+    def display(self):
+        return 'ID: ' + str(self.ct_id) + ', Name: ' + self.name + ', Desc: ' + self.desc

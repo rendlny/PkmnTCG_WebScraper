@@ -3,19 +3,19 @@ class Energy:
         self.en_id = en_id
         self.is_special = is_special
 
-        def get_en_id(self):
-            return self.en_id
+    def get_en_id(self):
+        return self.en_id
 
-        def set_en_id(self, en_id):
-            self.en_id = en_id
-            return
+    def set_en_id(self, en_id):
+        self.en_id = en_id
+        return
 
-        def is_special(self):
-            return self.is_special
+    def is_special(self):
+        return self.is_special
 
-        def set_is_special(self, is_special):
-            self.is_special = is_special
-            return
+    def set_is_special(self, is_special):
+        self.is_special = is_special
+        return
 
-        def display_energy(self):
-            return 'ID: ' + self.en_id + ', Special? ' + self.is_special
+    def display(self):
+        return 'ID: ' + self.en_id + ', Special? ' + self.is_special

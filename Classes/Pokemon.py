@@ -113,10 +113,10 @@ class Pokemon:
         self.atk3_id = atk3_id
         return
 
-    def display_pokemon(self):
+    def display(self):
         msg1 = 'ID: ' + self.p_id + ', Stage: ' + self.stage + ', HP: ' + self.hp + ', Retreat Cost: ' + self.retreat
         msg2 = ', Weakness: ' + self.weak + ', Resistance: ' + self.res + ', Resistance Power: ' + self.res_num
         msg3 = ', Evolves From: ' + self.evolves_from + ', Card ID: ' + self.card_id + ', Element: ' + self.element1_id + ', Extra Element: ' + self.element2_id
-        msg4 =  + ', Attack 1: ' + self.atk1_id + ', Attack 2: ' + self.atk2_id + ', Attack 3: ' + self.atk3_id
+        msg4 = ', Attack 1: ' + self.atk1_id + ', Attack 2: ' + self.atk2_id + ', Attack 3: ' + self.atk3_id
         msg = msg1 + msg2 + msg3 + msg4
         return msg

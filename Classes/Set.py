@@ -6,40 +6,40 @@ class Set:
         self.size = size
         self.desc = desc
 
-        def get_s_id(self):
-            return self.s_id
+    def get_s_id(self):
+        return self.s_id
 
-        def set_s_id(self, s_id):
-            self.s_id = s_id
-            return
+    def set_s_id(self, s_id):
+        self.s_id = s_id
+        return
 
-        def get_name(self):
-            return self.name
+    def get_name(self):
+        return self.name
 
-        def set_name(self, name):
-            self.name = name
-            return
+    def set_name(self, name):
+        self.name = name
+        return
 
-        def get_year(self):
-            return self.year
+    def get_year(self):
+        return self.year
 
-        def set_year(self, year):
-            self.year = year
-            return
+    def set_year(self, year):
+        self.year = year
+        return
 
-        def get_size(self):
-            return self.size
+    def get_size(self):
+        return self.size
 
-        def set_size(self, size):
-            self.size = size
-            return
+    def set_size(self, size):
+        self.size = size
+        return
 
-        def get_desc(self):
-            return self.desc
+    def get_desc(self):
+        return self.desc
 
-        def set_desc(self, desc):
-            self.desc = desc
-            return
+    def set_desc(self, desc):
+        self.desc = desc
+        return
 
-        def display_set(self):
-            return 'ID: ' + self.s_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + ', Desc: ' + self.desc
+    def display(self):
+        return 'ID: ' + self.s_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + ', Desc: ' + self.desc

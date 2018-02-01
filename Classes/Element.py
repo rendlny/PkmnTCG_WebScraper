@@ -4,26 +4,26 @@ class Element:
         self.name = name
         self.icon = icon
 
-        def get_e_id(self):
-            return self.e_id
+    def get_e_id(self):
+        return self.e_id
 
-        def set_e_id(self, e_id):
-            self.e_id = e_id
-            return
+    def set_e_id(self, e_id):
+        self.e_id = e_id
+        return
 
-        def get_name(self):
-            return self.name
+    def get_name(self):
+        return self.name
 
-        def set_name(self, name):
-            self.name = name
-            return
+    def set_name(self, name):
+        self.name = name
+        return
 
-        def get_icon(self):
-            return self.icon
+    def get_icon(self):
+        return self.icon
 
-        def set_icon(self, icon):
-            self.icon = icon
-            return
+    def set_icon(self, icon):
+        self.icon = icon
+        return
 
-        def display_element(self):
-            return 'ID: ' + self.e_id + ', Name: ' + self.name + ', Icon: ' + self.icon
+    def display(self):
+        return 'ID: ' + self.e_id + ', Name: ' + self.name + ', Icon: ' + self.icon

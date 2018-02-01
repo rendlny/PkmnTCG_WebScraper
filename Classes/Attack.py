@@ -41,5 +41,5 @@ class Attack:
         self.cost = cost
         return
 
-    def display_attack(self):
+    def display(self):
         return 'ID: ' + self.a_id + ', Name: ' + self.name +  ', Description: ' + self.desc + ', Damage: ' + str(self.dmg) + ', Cost: ' + self.cost
