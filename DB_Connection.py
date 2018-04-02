@@ -12,8 +12,8 @@ firebase = pyrebase.initialize_app(config)
 
 # Authentication
 auth = firebase.auth()
-user = auth.sign_in_with_email_and_password("ren.delaney@gmail.com", "1P@ssword")
-
+user = auth.sign_in_with_email_and_password("testuser@test.com", "T3stPassword")
+#user = auth.refresh(user['refreshToken'])
 db = firebase.database()
 
 ##sending data to db
@@ -23,4 +23,9 @@ db = firebase.database()
 ##Getting and printing data
 #all_elements = db.child("elements").get(user['idToken'])
 #for element in all_elements.each():
-    #print(str(element.key()) + ": " + str(element.val()))
+#    print(str(element.key()) + ": " + str(element.val()))
+
+#print('Reached end of file')
+
+#data = {"set_id": "sm4", "set_name": "testSet", "set_year": "2018", "set_size": "52", "set_desc": "test set2"}
+#db.child("sets", "2").set(data, user['idToken'])

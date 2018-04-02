@@ -1,13 +1,13 @@
-from Classes.Attack import *
-from Classes.Card import *
-from Classes.CardType import *
-from Classes.Element import *
-from Classes.Energy import *
-from Classes.Pokemon import *
-from Classes.Set import *
-from Classes.Subset import *
+from DTO.Attack import *
+from DTO.Card import *
+from DTO.CardType import *
+from DTO.Element import *
+from DTO.Energy import *
+from DTO.Pokemon import *
+from DTO.Set import *
+from DTO.Subset import *
 
-#Testing Constructors and Displays are working for all Classes
+#Testing Constructors and Displays are working for all DTO
 atk1 = Attack('1','Quick Attack', 'Flip a coin, if heads, this attack does 10 more damage.', '20', 'CC')
 card1 = Card('1','Pikachu','Eletric Mouse','4','Kioko','1','http/artlink.here','4','2','1')
 cardType1 = CardType('1','Trainer','So mad')

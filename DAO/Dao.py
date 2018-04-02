@@ -1,8 +1,10 @@
 import pyrebase
 
+from core.Data import Data
+
 class Dao:
     def __init__(self):
-        self.db_name = "poketools-tcg"
+        self.db_name = Data.DB
 
     def get_connection(self):
         url = "https://" + self.db_name + ".firebaseio.com"
