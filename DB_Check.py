@@ -8,6 +8,7 @@ user = DB_Connection.user
 
 print("Searching for last set...")
 lastSet = 1
+setCode = None
 lastSubset = 3
 
 while True:
@@ -15,10 +16,12 @@ while True:
     returnedSet = db.child("sets").child(setId).get(user['idToken']).val()
 
     if returnedSet is not None:
+        #get the set code
+        setCode = db.child("sets").child(setId).child("set_id").get(user['idToken']).val()
         lastSet += 1
     else:
         lastSet -= 1
-        print("Last set found: " + str(lastSet))
+        print("Last set found: " + str(lastSet) + " -> " + setCode)
         print()
         print("Searching for last Subset...")
 
@@ -30,6 +33,7 @@ while True:
             if subset is not None:
                 lastSubset += 1
 
+
             else:
                 lastSubset -= 1
                 print("Last Subset found: " + str(lastSubset))
@@ -38,4 +42,3 @@ while True:
         break
 
 #last set and subsets found. use these in webscraper to check for new sets & subsets
-
