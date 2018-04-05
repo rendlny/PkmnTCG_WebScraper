@@ -1,11 +1,24 @@
-##import DB connection
-##Checker should run here (checking if new sets exist)
-##if they do then webscrape below :D
+import urllib.request
 
-##get url
-##for loop where it loops until it gets all cards
+#import BeautifulSoup
+from bs4 import BeautifulSoup
+from core.Data import *
+from SetAndSubsetScraper import subset_array
 
-## .getCardData
-## push to DB
+print()
+if subset_array is None:
+    print("No new subsets")
 
-##next card
+else:
+    print("New subsets: ")
+    # go through each new subset and get details &cards
+    for value in subset_array:
+        print(value)
+
+# get url
+# for loop where it loops until it gets all cards
+
+#  .getCardData
+#  push to DB
+
+# next card

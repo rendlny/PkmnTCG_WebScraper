@@ -1,11 +1,11 @@
 class Subset:
-    def __init__(self,ss_id,name,year,size,desc, setID):
+    def __init__(self, ss_id, name, year, size, desc, set_id):
         self.ss_id = ss_id
         self.name = name
         self.year = year
         self.size = size
         self.desc = desc
-        self.setID = setID
+        self.set_id = set_id
 
     def get_ss_id(self):
         return self.ss_id
@@ -42,12 +42,13 @@ class Subset:
         self.desc = desc
         return
 
-    def get_setID(self):
-        return self.setID
+    def get_set_id(self):
+        return self.set_id
 
-    def set_setID(self, setID):
-        self.setID = setID
+    def set_set_id(self, set_id):
+        self.setID = set_id
         return
 
     def display(self):
-        return 'ID: ' + self.ss_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + ', Desc: ' + self.desc + ', Set ID: ' + self.setID
+        return 'ID: ' + self.ss_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + \
+               ', Desc: ' + self.desc + ', Set ID: ' + self.set_id
