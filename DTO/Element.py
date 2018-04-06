@@ -1,13 +1,13 @@
 class Element:
-    def __init__(self,e_id,name,icon):
+    def __init__(self, e_id=None, name="", icon=""):
         self.e_id = e_id
         self.name = name
         self.icon = icon
 
-    def get_e_id(self):
+    def get_id(self):
         return self.e_id
 
-    def set_e_id(self, e_id):
+    def set_id(self, e_id):
         self.e_id = e_id
         return
 
@@ -26,4 +26,4 @@ class Element:
         return
 
     def display(self):
-        return 'ID: ' + self.e_id + ', Name: ' + self.name + ', Icon: ' + self.icon
+        return 'ID: ' + str(self.e_id) + ', Name: ' + str(self.name) + ', Icon: ' + str(self.icon)

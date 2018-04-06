@@ -9,7 +9,7 @@ user = DB_Connection.user
 print("Searching for last set...")
 lastSet = 1
 setCode = None
-lastSubset = 3
+lastSubset = 1
 
 while True:
     setId = str(lastSet)

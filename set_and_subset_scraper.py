@@ -40,5 +40,5 @@ while setExists:
         newSubset += 1
 
     except Exception:
-        print("Subset [" + str(newSubset) + "] does not exist.")
+        # print("Subset [" + str(newSubset) + "] does not exist.")
         setExists = False

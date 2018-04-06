@@ -1,5 +1,5 @@
 class Subset:
-    def __init__(self, ss_id, name, year, size, desc, set_id):
+    def __init__(self, ss_id=None, name="", year=None, size=None, desc="", set_id=None):
         self.ss_id = ss_id
         self.name = name
         self.year = year
@@ -50,5 +50,5 @@ class Subset:
         return
 
     def display(self):
-        return 'ID: ' + self.ss_id + ', Name: ' + self.name + ', Year: ' + self.year + ', Size: ' + self.size + \
-               ', Desc: ' + self.desc + ', Set ID: ' + self.set_id
+        return 'ID: ' + str(self.ss_id) + ', Name: ' + str(self.name) + ', Year: ' + str(self.year) + ', Size: ' \
+               + str(self.size) + ', Desc: ' + str(self.desc) + ', Set ID: ' + str(self.set_id)
