@@ -106,13 +106,13 @@ else:
                 # Removing tags on start & end of url
                 imgUrl = imgUrl[1:]
                 imgUrl = imgUrl[:-3]
-                print(imgUrl)
+                # print(imgUrl)
 
                 # CREATING URL TO CARD INFO ###########################################
                 # cards
                 url = Data.URL_START + str(setCode) + "-series/" + str(setCode) + str(value) + "/" + str(cardCount) + \
                       "/"
-                print(url)
+                # print(url)
                 page = scrape_url(url)
                 # GETTING CARD NAME ###########################################
                 name = str(page.find('h1'))
@@ -127,7 +127,7 @@ else:
                     name = name + " " + nameParts[1]
                     name = name[:-5]
 
-                print("NAME:  " + name)
+                # print("NAME:  " + name)
 
                 # GETTING CARD STAGE ###################################################
                 stage = str(page.find('h2'))
@@ -137,20 +137,20 @@ else:
                     # crashes when it gets to trainer card NEEDS FIX
                     stage = stage[4:]
                     stage = stage[:-5]
-                    print("STAGE: " + stage)
+                    # print("STAGE: " + stage)
 
                     # GETTING CARD HP #####################################################
                     hp = str(page.find('span', class_='card-hp'))
                     hp = hp.split('</span>')
                     hp = hp[1]
-                    print("HP:    " + hp)
+                    # print("HP:    " + hp)
 
                     # GETTING CARD TYPE ###################################################
                     pkmnType = str(page.find('i'))
                     pkmnType = pkmnType.split('icon-')
                     pkmnType = pkmnType[1]
                     pkmnType = pkmnType[:-6]
-                    print("TYPE:  " + pkmnType)
+                    # print("TYPE:  " + pkmnType)
 
                     # GETTING TYPE ID FROM TYPE
                     type_id = None
@@ -192,7 +192,7 @@ else:
                                 energyCost = energyCost["title"]
                                 totalCost = totalCost + str(energyCost) + " "
 
-                            print("ENERGY COST: " + totalCost)
+                            # print("ENERGY COST: " + totalCost)
 
                             # finding attack name
                             # if the Pokemon is a GX, getting GX attack
@@ -227,10 +227,10 @@ else:
                                 atkDmg = atkDmg.split('>')
                                 atkDmg = atkDmg[1]
 
-                            print("ATK: " + atkName)
-                            print("ATK DESC: " + atkDesc)
-                            if dmg:
-                                print("DAMAGE: " + atkDmg)
+                            # print("ATK: " + atkName)
+                            # print("ATK DESC: " + atkDesc)
+                            # if dmg:
+                                # print("DAMAGE: " + atkDmg)
 
                     # GETTING WEAKNESS & RESISTANCE & RETREAT COST ########################
                     pkmnStats = page.find('div', class_='pokemon-stats')
@@ -252,7 +252,7 @@ else:
                             else:
                                 eng = details["title"]
                                 times = (details.contents[2]).strip()
-                                print(str(statName) + ": " + str(eng) + " " + str(times))
+                                # print(str(statName) + ": " + str(eng) + " " + str(times))
 
                         # Getting retreat COST
                         elif statCount is 3:
@@ -264,7 +264,7 @@ else:
                                     energyCost = energyCost + " " + str(energy)
                                 else:
                                     energyCost = "NONE"
-                            print("RETREAT COST: " + energyCost)
+                            # print("RETREAT COST: " + energyCost)
 
                     # get retreat cost and desc
 
@@ -273,13 +273,13 @@ else:
                     energyCardType = str((page.find('div', class_='card-type')).find('h2'))
                     energyCardType = energyCardType[4:]
                     energyCardType = energyCardType[:-5]
-                    print("ENERGY TYPE: " + energyCardType)
+                    # print("ENERGY TYPE: " + energyCardType)
 
                     if 'Special' in energyCardType:
                         energyDesc = str((page.find('div', class_='ability')).find('p'))
                         energyDesc = energyDesc[3:]
                         energyDesc = energyDesc[:-4]
-                        print("DESCRIPTION:" + energyDesc)
+                        # print("DESCRIPTION:" + energyDesc)
 
                     else:
 
@@ -287,42 +287,42 @@ else:
                         element = element[:-7]
                         element = element.split(">")
                         element = element[1]
-                        print("ELEMENT: " + element)
+                        # print("ELEMENT: " + element)
 
                         name = "Basic " + element + " Energy"
 
                 # Trainer Cards, checking trainer type
                 else:
                     if 'Item' in stage:
-                        print("Trainer - Item")
+                        # print("Trainer - Item")
                         rule = Data.ITEM_RULE
 
                     elif 'Tool' in stage:
-                        print("Trainer - Tool")
+                        # print("Trainer - Tool")
                         rule = Data.TOOL_RULE
                         specialRule = Data.TOOL_SPECIAL_RULE
 
                     elif 'Stadium' in stage:
-                        print("Trainer - Stadium")
+                        # print("Trainer - Stadium")
                         rule = Data.STADIUM_RULE
 
                     elif 'Supporter' in stage:
-                        print("Trainer - Supporter")
+                        # print("Trainer - Supporter")
                         rule = Data.SUPPORTER_RULE
 
                     elif 'Technical' in stage:
-                        print("Technical Machine")
+                        # print("Technical Machine")
                         rule = Data.TM_RULE
 
                     elif 'Secret' in stage:
-                        print("Rocket's Secret Machine")
+                        # print("Rocket's Secret Machine")
                         rule = Data.SECRET_RULE
 
                     desc = page.find('div', class_='ability')
                     desc = str(desc.find('p'))
                     desc = desc[3:]
                     desc = desc[:-4]
-                    print("DESCRIPTION: " + desc)
+                    # print("DESCRIPTION: " + desc)
 
                 # GETTING CARD ILLUSTRATOR ############################################
                 # checking card is not an energy card as these do not have an illustrator
@@ -332,7 +332,7 @@ else:
                     illus = illus[:-4]
                     illus = illus.split('>')
                     illus = illus[1]
-                    print("ILLUSTRATOR: " + illus)
+                    # print("ILLUSTRATOR: " + illus)
 
                 # GETTING CARD SET TOTAL NUMBER (Excluding secret cards) ##############
                 setTotal = str((page.find('div', class_='stats-footer')).find('span'))
@@ -340,7 +340,7 @@ else:
                 setTotal = setTotal[:-7]
 
                 # increase count to go onto next card
-                print("CARD NUMBER: " + setTotal)
+                # print("CARD NUMBER: " + setTotal)
 
                 # creating card with web-scraped data and uploading to DB
                 card = Card(str(cardCount), name, "test desc", str(setTotal), illus, '1', imgUrl, str(lastSet), str(value), str(type_id))
@@ -349,7 +349,7 @@ else:
                 if added is None:
                     print("Failed to upload new card to Database")
                 else:
-                    print("Card [" + name + "] successfully uploaded to Database")
+                    print("Card [" + name + "] successfully uploaded to Database [" + setTotal + "]")
 
                 cardCount += 1
 
