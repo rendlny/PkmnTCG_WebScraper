@@ -8,7 +8,6 @@ DB = "poketools-tcg"
 URL = "https://" + DB + ".firebaseio.com"
 DOMAIN = DB + ".firebaseapp.com"
 BUCKET = DB + ".appspot.com"
-API_KEY = "AIzaSyB0XFXwXUjWEgKAR1nxCxxbHkJlZRy_IOk"
 USERNAME = "ren.delaney@gmail.com"
 PASSWORD = "1P@ssword"
 
@@ -21,5 +20,3 @@ STADIUM_RULE = "This card stays in play when you play it. Discard this card if a
 SUPPORTER_RULE = "You may play only 1 Supporter card during your turn (before your attack)"
 TM_RULE = "Attach this card to 1 of your Pokemon"
 SECRET_RULE = ""
-
-
