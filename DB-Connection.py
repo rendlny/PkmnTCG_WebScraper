@@ -1,7 +1,7 @@
 import pyrebase
 # Database Connection
 config = {
-    "apiKey": "AIzaSyB0XFXwXUjWEgKAR1nxCxxbHkJlZRy_IOk",
+    "apiKey": "api_key_here",
     "authDomain": "poketools-tcg.firebaseapp.com",
     "databaseURL": "https://poketools-tcg.firebaseio.com",
     "storageBucket": "poketools-tcg.appspot.com"
