@@ -5,11 +5,23 @@ to the database. This code is designed to be run as a cron job, once or twice a 
 
 ## Setup
 
-First install the requirements
+### Dependencies
+
+This project has a requirements.txt file to allow you to easily install the dependencies.
 
 ```
 pip install -r requirements.txt
 ```
+
+The following packages will be installed:
+
+- pycryptodome
+- pyrebase
+- beautifulsoup4
+- python-dotenv
+- mypy
+- pycodestyle
+- pylint
 
 ## Usage
 
