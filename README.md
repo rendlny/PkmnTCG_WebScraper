@@ -1,7 +1,7 @@
 # Pokemon TCG WebScraper
 
 This program grabs pages from the official Pokemon Card Database Webpage and runs through each cards grabbing data to be added
-to the database.
+to the database. This code is designed to be run as a cron job, once or twice a month to fetch the latest card releases from Pokemon.
 
 ## Setup
 
@@ -21,9 +21,9 @@ py start.py
 
 ## Static tests
 
-- [MyPy](https://mypy.readthedocs.io/en/stable/getting_started.html): `mypy filename.py`
-- [Pylint](https://pypi.org/project/pylint/): `mypy filename.py`
-- [pycodestyle](https://pypi.org/project/pycodestyle/): `pycodestyle webscrape.py`
+- [MyPy](https://mypy.readthedocs.io/en/stable/getting_started.html): `mypy start.py`
+- [Pylint](https://pypi.org/project/pylint/): `mypy start.py`
+- [pycodestyle](https://pypi.org/project/pycodestyle/): `pycodestyle start.py`
 
 ## Details Scraped
 
@@ -47,6 +47,6 @@ Card Set & Subset numbers must be set in the code & it will run through that sub
 
 ## Other Features
 
-    run through all sets
-    check for new sets
-    seperate cards by type (Pokemon, Trainer, Eneregy)
+- run through all sets
+- check for new sets
+- separate cards by type (Pokemon, Trainer, Energy)
