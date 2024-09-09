@@ -13,11 +13,17 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run webscrape.py to start the webscraper
+Run start.py to start the webscraper
 
 ```
-python webscrape.py
+py start.py
 ```
+
+## Static tests
+
+- [MyPy](https://mypy.readthedocs.io/en/stable/getting_started.html): `mypy filename.py`
+- [Pylint](https://pypi.org/project/pylint/): `mypy filename.py`
+- [pycodestyle](https://pypi.org/project/pycodestyle/): `pycodestyle webscrape.py`
 
 ## Details Scraped
 
