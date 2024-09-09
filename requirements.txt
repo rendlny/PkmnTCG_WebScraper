@@ -1,6 +1,8 @@
 pycryptodome
-pyrebase
+# pyrebase
 beautifulsoup4
+requests
+urllib3
 python-dotenv
 mypy
 pycodestyle

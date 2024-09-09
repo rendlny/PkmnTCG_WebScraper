@@ -14,16 +14,14 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleW
 #Function to return html details grabbed from given url
 ################################################################################
 def scrapeUrl(url):
+    #query the website and return html to var 'page'
     webpage = urllib.request.urlopen(url)
+    #Parse html in 'page' & store in BS format
     page = BeautifulSoup(webpage, "html.parser")
     return page
 ################################################################################
 
-#query the website and return html to var 'page'
-page = urllib.request.urlopen(url)
-
-#Parse html in 'page' & store in BS format
-webpage = BeautifulSoup(page, "html.parser")
+webpage = scrapeUrl(url)
 
 #getting span that contains the number of pages
 soup = webpage.find('div', id='cards-load-more')
