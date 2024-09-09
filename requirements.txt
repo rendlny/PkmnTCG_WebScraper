@@ -1,3 +1,4 @@
 pycryptodome
 pyrebase
 beautifulsoup4
+python-dotenv

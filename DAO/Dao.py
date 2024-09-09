@@ -1,4 +1,12 @@
 import pyrebase
+from dotenv import load_dotenv
+import os
+
+# Get Env value
+load_dotenv()
+api_key= os.getenv("FIREBASE_KEY")
+password= os.getenv("FIREBASE_PASSWORD")
+password= os.getenv("FIREBASE_USERNAME")
 
 class Dao:
     def __init__(self):
@@ -8,9 +16,6 @@ class Dao:
         url = "https://" + self.db_name + ".firebaseio.com"
         domain = self.db_name + ".firebaseapp.com"
         bucket = self.db_name + ".appspot.com"
-        api_key = "AIzaSyB0XFXwXUjWEgKAR1nxCxxbHkJlZRy_IOk"
-        username = "ren.delaney@gmail.com"
-        password = "1P@ssword"
         db = None
 
         config = {

@@ -1,5 +1,4 @@
 import urllib.request
-#import BeautifulSoup
 from bs4 import BeautifulSoup
 
 #specify url

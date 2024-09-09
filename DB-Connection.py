@@ -1,7 +1,16 @@
 import pyrebase
+from dotenv import load_dotenv
+import os
+
+# Get Env value
+load_dotenv()
+api_key= os.getenv("FIREBASE_KEY")
+api_user= os.getenv("FIREBASE_USERNAME")
+api_password= os.getenv("FIREBASE_PASSWORD")
+
 # Database Connection
 config = {
-    "apiKey": "api_key_here",
+    "apiKey": api_key,
     "authDomain": "poketools-tcg.firebaseapp.com",
     "databaseURL": "https://poketools-tcg.firebaseio.com",
     "storageBucket": "poketools-tcg.appspot.com"
@@ -12,7 +21,7 @@ firebase = pyrebase.initialize_app(config)
 
 # Authentication
 auth = firebase.auth()
-user = auth.sign_in_with_email_and_password("ren.delaney@gmail.com", "1P@ssword")
+user = auth.sign_in_with_email_and_password(api_user, api_password)
 
 db = firebase.database()
 
