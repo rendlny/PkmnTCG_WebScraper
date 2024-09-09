@@ -11,6 +11,14 @@ First install the requirements
 pip install -r requirements.txt
 ```
 
+## Usage
+
+Run webscrape.py to start the webscraper
+
+```
+python webscrape.py
+```
+
 ## Details Scraped
 
 - Url to card image

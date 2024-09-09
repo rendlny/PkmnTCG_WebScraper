@@ -28,6 +28,10 @@ webpage = BeautifulSoup(page, "html.parser")
 
 #getting span that contains the number of pages
 soup = webpage.find('div', id='cards-load-more')
+if soup is None:
+    print("NOTHING FOUND")
+    quit()
+
 soup = soup.findAll('span')
 spanTxt = soup[1].string
 
